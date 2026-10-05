@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7660df39b4c932d40aa9c5ea7d20108b, type: 3}
+  m_Name: Margot
+  m_EditorClassIdentifier: Assembly-CSharp::ClientData
+  clientName: "Margot, la boulang\xE8re"
+  portrait: {fileID: 0}
+  dialogue: "Mon fils ne rentre plus le soir depuis des semaines. Dites-moi qu'il
+    va bien\u2026 dites-moi ce que l'avenir nous r\xE9serve."
+  palmImage: {fileID: 0}
+  ligneDeVie: "Longue et solide, mais marqu\xE9e d'une fatigue r\xE9cente."
+  ligneDeCoeur: Profonde. Elle aime sans compter, surtout ses proches.
+  ligneDeTete: Simple et droite. Elle ne ment pas.
+  aUnOrdreDuBureau: 0
+  carteOrdonnee: {fileID: 0}
+  texteOrdre: 
+  estBonnePersonne: 1
+  resultatBonneCarte: "Son fils est rentr\xE9 \xE0 l'aube. Margot a offert du pain
+    \xE0 tout le quartier."
+  resultatMauvaiseCarte: "La boulangerie a ferm\xE9. Personne ne sait o\xF9 est partie
+    Margot."

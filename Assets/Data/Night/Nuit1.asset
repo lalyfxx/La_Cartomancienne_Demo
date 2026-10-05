@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d486cacf4752c734ca725c5e34f96b8a, type: 3}
+  m_Name: Nuit1
+  m_EditorClassIdentifier: Assembly-CSharp::NightData
+  deck:
+  - {fileID: 11400000, guid: 337c3d45ba39fa14eac123d9eab2b9a0, type: 2}
+  - {fileID: 11400000, guid: 37a5f50d4d7f1f94fa4039b6b9bea0fd, type: 2}
+  - {fileID: 11400000, guid: 095ae4d9c8304c344add10c931d55db2, type: 2}
+  - {fileID: 11400000, guid: 4df98e9fba44134448008417b53e4599, type: 2}
+  - {fileID: 11400000, guid: e9c11f49039414f49a475f8a2fbb13c9, type: 2}
+  clients:
+  - {fileID: 11400000, guid: 14acfb196c4fff148a52a662aeb55f64, type: 2}
+  - {fileID: 11400000, guid: 941727cd2cbb14e4bb0f9ee3418fe49a, type: 2}
+  - {fileID: 11400000, guid: d250260eca7d6d84f98833e1a707e070, type: 2}
