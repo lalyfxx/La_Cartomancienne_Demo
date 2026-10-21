@@ -1,28 +1,35 @@
-using UnityEngine;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+public class MenuManagerProto : MonoBehaviour
 {
-    public void NouvellePartie()
+    [SerializeField] private GameObject panelSettings;
+    [SerializeField] private GameObject cartesMenu;
+
+    public void NewPart()
     {
-        PlayerPrefs.DeleteKey("sauvegarde"); // à adapter à ton système de save
-        SceneManager.LoadScene("Jeu");       // nom exact de ta scène
+        SceneManager.LoadScene("DEMO");
     }
 
-    public void Continuer()
+    public void Continue()
     {
-        if (PlayerPrefs.HasKey("sauvegarde"))
-            SceneManager.LoadScene("Jeu");
+        SceneManager.LoadScene("DEMO"); 
     }
 
-    public void OuvrirOptions()
+    public void OpenSettings()
     {
-        // ex : activer un panneau Settings
+        panelSettings.SetActive(true);
+        cartesMenu.SetActive(false);
     }
 
-    public void Quitter()
+    public void ShutSettings()
+    {
+        panelSettings.SetActive(false);
+        cartesMenu.SetActive(true);
+    }
+
+    public void Quit()
     {
         Application.Quit();
 #if UNITY_EDITOR

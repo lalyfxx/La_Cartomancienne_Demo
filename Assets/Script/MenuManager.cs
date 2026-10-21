@@ -6,7 +6,7 @@ using UnityEngine.Video;
 using UnityEngine.InputSystem;
 #endif
 
-public class MenuManagerProto : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     [Header("Vidéo d'intro")]
     [Tooltip("L'objet VideoPlayer de la scène")]
