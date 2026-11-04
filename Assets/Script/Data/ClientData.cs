@@ -3,11 +3,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NouveauClient", menuName = "Cartomancienne/Client")]
 public class ClientData : ScriptableObject
 {
-    [Header("Identité")]
+    [Header("Personnage")]
+    [Tooltip("Le personnage qui vient. Ses cartes s'accumulent d'une visite à l'autre.")]
+    public PersonnageData personnage;
+
+    [Header("Ancien nom et portrait (utilisés seulement si aucun personnage n'est mis)")]
     public string clientName;
 
     public Sprite portrait;
 
+    [Header("Ce qu'il raconte cette nuit")]
     [TextArea(3, 6)]
     public string dialogue;
 
@@ -23,21 +28,36 @@ public class ClientData : ScriptableObject
     [TextArea(2, 4)]
     public string ligneDeTete;
 
-    [Header("Ordre du Bureau (laisser décoché si aucun ordre)")]
-    public bool aUnOrdreDuBureau;
+    [Header("Pouvoir : marc de café")]
+    [TextArea(2, 4)]
+    public string marcDeCafe;
 
-    public CardData carteOrdonnee;
+    [Header("Pouvoir : pendule (une seule question par nuit)")]
+    public string questionPendule;
 
-    [TextArea(2, 3)]
-    public string texteOrdre;
+    public bool reponsePendule;
 
-    [Header("Vérité cachée (le joueur ne la voit pas)")]
-    public bool estBonnePersonne;
+    [Header("Pouvoir : aura photographiée")]
+    [TextArea(2, 4)]
+    public string aura;
 
-    [Header("Conséquences affichées en fin de nuit")]
+    [Header("Réaction affichée en fin de nuit")]
     [TextArea(2, 4)]
     public string resultatBonneCarte;
 
     [TextArea(2, 4)]
     public string resultatMauvaiseCarte;
+
+    [TextArea(2, 4)]
+    public string resultatSpeciale;
+
+    public string NomAffiche
+    {
+        get { return personnage != null ? personnage.nom : clientName; }
+    }
+
+    public Sprite PortraitAffiche
+    {
+        get { return personnage != null && personnage.portrait != null ? personnage.portrait : portrait; }
+    }
 }

@@ -50,7 +50,15 @@ public class CardTooltip : MonoBehaviour
 
         titleText.text = data.cardName;
 
-        string typeLabel = data.type == CardType.Bonne ? "Bénédiction" : "Châtiment";
+        string typeLabel = "Châtiment";
+        if (data.type == CardType.Bonne)
+        {
+            typeLabel = "Bénédiction";
+        }
+        else if (data.type == CardType.Speciale)
+        {
+            typeLabel = "Spéciale";
+        }
         descriptionText.text = data.description + "\n<i>" + typeLabel + "</i>";
 
         card.GetWorldCorners(corners);
